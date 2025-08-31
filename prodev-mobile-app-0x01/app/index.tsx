@@ -1,40 +1,46 @@
-import { Text, View, StyleSheet } from "react-native";
+import { StyleSheet, View, Text } from "react-native";
 
 export default function Index() {
   return (
-  <View>
-      <Text>Entry Screen - Awesome</Text>
-    
-  <Text style={styles.largeText}>Typescript is great if you practice more</Text>
-  <Text style={styles.mediumText}>React Native provides you a single codebase for cross platforms</Text>
-  <Text style={styles.smallText}>ALX is awesome</Text>
-</View>
+    <View style={styles.container}>
+      <Text style={styles.mainText}>Entry Screen - Awesome</Text>
+
+      <Text style={styles.largeText}>
+        Typescript is great if you practice more
+      </Text>
+      <Text style={styles.mediumText}>
+        React Native provides you a single codebase for cross platforms
+      </Text>
+      <Text style={styles.smallText}>ALX is awesome</Text>
+    </View>
   );
 }
 
-
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: "#90caf9",
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "#fff",
+    padding: 20,
+  },
+  mainText: {
+    fontSize: 20,
+    fontWeight: "bold",
+    marginBottom: 20,
   },
   largeText: {
-    fontSize: 30,
-    color: "#f44336",
-    marginBottom: 5,
-    fontWeight: "700",
-    fontVariant: ["small-caps"],
+    fontSize: 18,
+    color: "blue",
+    marginBottom: 10,
   },
   mediumText: {
-    fontSize: 20,
-    color: "#9c27b0",
+    fontSize: 16,
+    color: "green",
     marginBottom: 10,
-    fontWeight: "500",
-    textAlign: "right",
   },
   smallText: {
-    fontSize: 15,
-    color: "#2196f3",
-    fontWeight: "400",
-    textAlign: "center",
+    fontSize: 14,
+    color: "red",
   },
 });
